@@ -1,0 +1,20 @@
+.EditPostBody .postBodyLabal {
+  margin-bottom: -7px;
+  margin-left: 8px;
+  font-size: 13px;
+  background: white;
+  z-index: 100;
+  color: #888888;
+  padding: 0 5px;
+}
+.EditPostBody .postBodyInput {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 15px;
+}
+
+.EditPostBody .postBodyInput:focus {
+  box-sizing: border-box;
+  outline: none !important;
+  border: 2px solid #3f51b5;
+}
