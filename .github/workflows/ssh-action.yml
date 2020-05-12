@@ -22,7 +22,7 @@ jobs:
      - name: ls -a via ssh
        uses: garygrossgarten/github-action-ssh@release
        with:
-          command: ls -a
+          command: node --version
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           privateKey: ${{ secrets.SSH_PRIVATE_KEY }}
