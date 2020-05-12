@@ -19,10 +19,12 @@ jobs:
         node-version: [12.x] 
     
     steps:
-     - name: ls -a via ssh
-       uses: garygrossgarten/github-action-ssh@release
-       with:
-          command: node --version
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          privateKey: ${{ secrets.SSH_PRIVATE_KEY }}
+    - name: executing remote ssh commands
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        username: ${{ secrets.USERNAME }}
+        port: ${{ secrets.PORT }}
+        script: |
+         /root/.nvm/versions/node/v12.13.1/bin/npm --version
