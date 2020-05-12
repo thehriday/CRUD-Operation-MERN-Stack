@@ -28,4 +28,5 @@ jobs:
         port: ${{ secrets.PORT }}
         script: |
           cd ${{ secret.DEPLOY_PATH }}
+          pwd
           ls
