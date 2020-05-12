@@ -27,5 +27,9 @@ jobs:
         username: ${{ secrets.USERNAME }}
         port: ${{ secrets.PORT }}
         script: |
-          ls
-          npm --version
+          cd ci-cd-test/CRUD-Operation-MERN-Stack
+          git pull origin master
+          /root/.nvm/versions/node/v12.13.1/bin/npm install --production
+          cd client
+          /root/.nvm/versions/node/v12.13.1/bin/npm install
+          /root/.nvm/versions/node/v12.13.1/bin/npm run build
