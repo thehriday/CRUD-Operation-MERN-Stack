@@ -27,5 +27,5 @@ jobs:
         username: ${{ secrets.USERNAME }}
         port: ${{ secrets.PORT }}
         script: |
-          pwd
-          ls
+         cd ${{ secret.DEPLOY_PATH }}
+         ls
