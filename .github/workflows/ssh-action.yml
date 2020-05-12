@@ -24,13 +24,5 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: node --version
-    - name: executing remote ssh commands
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.HOST }}
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
-        username: ${{ secrets.USERNAME }}
-        port: ${{ secrets.PORT }}
-        script: |
-          node --version
+    - run: npm install
+    - run: ls
