@@ -19,10 +19,12 @@ jobs:
         node-version: [12.x] 
     
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
+    - name: executing remote ssh commands
+      uses: appleboy/ssh-action@master
       with:
-        node-version: ${{ matrix.node-version }}
-    - run: npm install
-    - run: ls
+        host: ${{ secrets.HOST }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        username: ${{ secrets.USERNAME }}
+        port: ${{ secrets.PORT }}
+        script: |
+          node --version
