@@ -25,8 +25,5 @@ jobs:
         script: |
           cd ci-cd-test/CRUD-Operation-MERN-Stack
           git pull origin master
-          npm install --production
-          cd client
-          npm install
-          npm run build
+          npm --version
           
