@@ -24,5 +24,6 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         username: ${{ secrets.USERNAME }}
         port: ${{ secrets.PORT }}
+        timeout: "100s"
         script: |
          ls -a
