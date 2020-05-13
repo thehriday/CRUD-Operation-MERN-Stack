@@ -35,5 +35,5 @@ jobs:
         port: ${{ secrets.PORT }}
         script: |
          export PATH=$PATH:/root/.nvm/versions/node/v12.16.2/bin
-         node --version
+         npm --version
        
