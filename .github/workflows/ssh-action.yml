@@ -19,13 +19,9 @@ jobs:
         node-version: [12.x] 
     
     steps:
-    - name: executing remote ssh commands
-      uses: appleboy/ssh-action@master
+    - name: Execute SSH commmands on remote server
+      uses: JimCronqvist/action-ssh@master
       with:
-        host: ${{ secrets.HOST }}
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
-        username: ${{ secrets.USERNAME }}
-        port: ${{ secrets.PORT }}
-        script: |
-         echo $PATH
-       
+        hosts: ${{ secrets.HOST }}
+        privateKey: ${{ secrets.PRIVATE_KEY }}
+        command: ls
