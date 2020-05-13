@@ -47,5 +47,5 @@ jobs:
         username: ${{ secrets.USERNAME }}
         port: ${{ secrets.PORT }}
         script: |
-         cd "/root/.nvm/versions/node/v12.16.2/bin" && ls
+         ls
        
