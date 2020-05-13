@@ -33,5 +33,5 @@ jobs:
         username: ${{ secrets.USERNAME }}
         port: ${{ secrets.PORT }}
         script: |
-         echo $NVM_DIR
+         cd /root/.nvm/versions/ && ls
        
