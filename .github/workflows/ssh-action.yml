@@ -23,10 +23,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm install --production
-    - run: cd client && npm install
-    - run: cd client && npm run build    
-        
+    
     
     - name: executing remote ssh commands
       uses: appleboy/ssh-action@master
