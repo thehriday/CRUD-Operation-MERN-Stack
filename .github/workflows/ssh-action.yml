@@ -33,5 +33,5 @@ jobs:
         username: ${{ secrets.USERNAME }}
         port: ${{ secrets.PORT }}
         script: |
-         cd /root/.nvm/versions/ && ls
+         cd /root/.nvm/versions/node && ls
        
