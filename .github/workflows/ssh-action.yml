@@ -34,5 +34,5 @@ jobs:
         username: ${{ secrets.USERNAME }}
         port: ${{ secrets.PORT }}
         script: |
-         "/root/.nvm/versions/node/v12.13.1/bin/pm2" --version
+         "/root/.nvm/versions/node/v12.13.1/bin/npm" --version
        
