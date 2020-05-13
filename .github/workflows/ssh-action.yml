@@ -28,16 +28,6 @@ jobs:
     - run: cd client && npm install
     - run: cd client && npm run build    
         
-    - name: Copy file via scp
-      uses: appleboy/scp-action@master
-      env:
-        HOST: ${{ secrets.HOST }}
-        USERNAME: ${{ secrets.USERNAME }}
-        PORT: ${{ secrets.PORT }}
-        KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-      with:
-        source: "."
-        target: "/root/test-hridoy"
     
     - name: executing remote ssh commands
       uses: appleboy/ssh-action@master
