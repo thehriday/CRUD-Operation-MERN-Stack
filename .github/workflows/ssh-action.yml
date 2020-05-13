@@ -36,5 +36,4 @@ jobs:
         script: |
             cd /root/test-hridoy
             sh test.sh
-            npm --version
        
