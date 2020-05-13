@@ -10,7 +10,7 @@ on:
     branches: [ master ]
 
 jobs:
-  copyfiles:
+  deploy:
 
     runs-on: ubuntu-latest
     
@@ -28,7 +28,7 @@ jobs:
         target: "/root/test-hridoy"
          
   build:
-
+    needs: deploy
     runs-on: ubuntu-latest
     
     steps:      
