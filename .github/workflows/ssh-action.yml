@@ -1,5 +1,4 @@
-# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+# This workflow will do a production install of node dependencies, build and run
 
 name: Node.js CI
 
@@ -25,7 +24,7 @@ jobs:
         KEY: ${{ secrets.SSH_PRIVATE_KEY }}
       with:
         source: "."
-        target: "/root/test-hridoy"
+        target: "${{ secrets.PROJECT_LOCATION }}"
          
   build:
     needs: deploy
@@ -40,5 +39,5 @@ jobs:
         username: ${{ secrets.USERNAME }}
         port: ${{ secrets.PORT }}
         script: |
-         cd /root/test-hridoy
+         cd ${{ secrets.PROJECT_LOCATION }}
          sh deploy.sh      
