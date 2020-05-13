@@ -19,9 +19,10 @@ jobs:
         node-version: [12.x] 
     
     steps:
-    - name: Execute SSH commmands on remote server
-      uses: JimCronqvist/action-ssh@master
+    - name: ls -a via ssh
+      uses: garygrossgarten/github-action-ssh@release
       with:
-        hosts: ${{ secrets.HOST }}
-        privateKey: ${{ secrets.PRIVATE_KEY }}
-        command: ls
+        command: ls -a
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        privateKey: ${{ secrets.SSH_PRIVATE_KEY }}
