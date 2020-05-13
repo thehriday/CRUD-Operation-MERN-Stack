@@ -28,4 +28,4 @@ jobs:
         port: ${{ secrets.PORT }}
         script: |
          /root/.nvm/versions/node/v12.13.1/bin/npm --version
-         ls
+       
