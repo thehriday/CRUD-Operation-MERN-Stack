@@ -99,7 +99,7 @@ function NavBar(props) {
           </IconButton>
           <Link style={{ color: "white", textDecoration: "none" }} to="/">
             <Typography variant="h6" className={classes.title}>
-              CRUD Operation
+             MY Blog
             </Typography>
           </Link>
           <div className={classes.search}>
