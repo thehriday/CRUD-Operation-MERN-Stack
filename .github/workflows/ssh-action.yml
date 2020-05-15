@@ -24,7 +24,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm install --production
-    - run: cd client && npm install && npm run build -- --profile
+    - run: cd client && npm install && npm run build
                   
     - name: Copy file via scp
       uses: appleboy/scp-action@master
