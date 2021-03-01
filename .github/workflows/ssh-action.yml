@@ -50,5 +50,4 @@ jobs:
         username: ${{ secrets.USERNAME }}
         port: ${{ secrets.PORT }}
         script: |
-         cd ${{ secrets.PROJECT_LOCATION }}
-         sh deploy.sh 
+         ls
