@@ -16,26 +16,7 @@ jobs:
     strategy:
       matrix:
         node-version: [12.x]
-    
-    steps:
-    - uses: actions/checkout@v1
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: npm install --production
-    - run: cd client && npm install && npm run build
-                  
-    - name: Copy file via scp
-      uses: appleboy/scp-action@master
-      env:
-        HOST: ${{ secrets.HOST }}
-        USERNAME: ${{ secrets.USERNAME }}
-        PORT: ${{ secrets.PORT }}
-        KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-      with:
-        source: "."
-        target: "${{ secrets.PROJECT_LOCATION }}"
+  
          
   build:
     needs: deploy
@@ -49,6 +30,4 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         username: ${{ secrets.USERNAME }}
         port: ${{ secrets.PORT }}
-        script: |
-         cd ${{ secrets.PROJECT_LOCATION }}
-         sh deploy.sh  
+        script: ls  
