@@ -1,5 +1,4 @@
 # This workflow will do a production install of node dependencies, build and run
-
 name: Node.js CI
 
 on:
